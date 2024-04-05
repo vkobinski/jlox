@@ -42,7 +42,7 @@ public class Scanner {
     }
 
     List<Token> scanTokens() {
-        while(!isAtEnd()) {
+        while (!isAtEnd()) {
             start = current;
             scanToken();
         }
@@ -51,20 +51,45 @@ public class Scanner {
         return tokens;
     }
 
+    // Add support to Lox’s scanner for C-style /* ... */ block comments.
+    // Make sure to handle newlines in them.
+    // Consider allowing them to nest.
+    // Is adding support for nesting more work than you expected? Why?
     private void scanToken() {
         char c = advance();
 
         switch (c) {
-            case '(': addToken(LEFT_PAREN); break;
-            case ')': addToken(RIGHT_PAREN); break;
-            case '{': addToken(LEFT_BRACE); break;
-            case '}': addToken(RIGHT_BRACE); break;
-            case ',': addToken(COMMA); break;
-            case '.': addToken(DOT); break;
-            case '-': addToken(MINUS); break;
-            case '+': addToken(PLUS); break;
-            case ';': addToken(SEMICOLON); break;
-            case '*': addToken(STAR); break;
+            case '(':
+                addToken(LEFT_PAREN);
+                break;
+            case ')':
+                addToken(RIGHT_PAREN);
+                break;
+            case '{':
+                addToken(LEFT_BRACE);
+                break;
+            case '}':
+                addToken(RIGHT_BRACE);
+                break;
+            case ',':
+                addToken(COMMA);
+                break;
+            case '.':
+                addToken(DOT);
+                break;
+            case '-':
+                addToken(MINUS);
+                break;
+            case '+':
+                addToken(PLUS);
+                break;
+            case ';':
+                addToken(SEMICOLON);
+                break;
+            case '*':
+                if(peek() == '/') advance();
+                else addToken(STAR);
+                break;
             case '!':
                 addToken(match('=') ? BANG_EQUAL : BANG);
                 break;
@@ -78,9 +103,11 @@ public class Scanner {
                 addToken(match('=') ? GREATER_EQUAL : GREATER);
                 break;
             case '/':
-                if(match('/')) {
-                    while(peek() != '\n' && !isAtEnd()) advance();
-                } else {
+                if (match('/')) {
+                    while (peek() != '\n' && !isAtEnd()) advance();
+                } else if (match('*')) {
+                    while(peek() != '*' && peekNext() != '/') advance();
+                }else {
                     addToken(SLASH);
                 }
                 break;
@@ -96,12 +123,11 @@ public class Scanner {
                 break;
 
             default:
-                if(isDigit(c)) {
+                if (isDigit(c)) {
                     number();
                 } else if (isAlpha(c)) {
                     identifier();
-            }
-                else {
+                } else {
                     Lox.error(line, "Unexpected character.");
                 }
                 break;
@@ -113,11 +139,11 @@ public class Scanner {
     }
 
     private void identifier() {
-        while(isAlphaNumeric(peek())) advance();
+        while (isAlphaNumeric(peek())) advance();
 
         String text = source.substring(start, current);
         TokenType type = keywords.get(text);
-        if(type == null) type = IDENTIFIER;
+        if (type == null) type = IDENTIFIER;
 
         addToken(IDENTIFIER);
     }
@@ -131,12 +157,12 @@ public class Scanner {
     }
 
     private void number() {
-        while(isDigit(peek())) advance();
+        while (isDigit(peek())) advance();
 
-        if(peek() == '.' && isDigit(peekNext())) {
+        if (peek() == '.' && isDigit(peekNext())) {
             advance();
 
-            while(isDigit(peek())) advance();
+            while (isDigit(peek())) advance();
         }
 
         addToken(NUMBER,
@@ -144,17 +170,17 @@ public class Scanner {
     }
 
     private char peekNext() {
-        if(current + 1 >= source.length()) return '\0';
+        if (current + 1 >= source.length()) return '\0';
         return source.charAt(current + 1);
     }
 
     private void string() {
-        while(peek() != '"' && !isAtEnd()) {
-            if(peek() == '\n') line++;
+        while (peek() != '"' && !isAtEnd()) {
+            if (peek() == '\n') line++;
             advance();
         }
 
-        if(isAtEnd()) {
+        if (isAtEnd()) {
             Lox.error(line, "Unterminated string.");
             return;
         }
@@ -166,13 +192,13 @@ public class Scanner {
     }
 
     private char peek() {
-        if(isAtEnd()) return '\0';
+        if (isAtEnd()) return '\0';
         return source.charAt(current);
     }
 
     private boolean match(char expected) {
-        if(isAtEnd()) return false;
-        if(source.charAt(current) != expected) return false;
+        if (isAtEnd()) return false;
+        if (source.charAt(current) != expected) return false;
 
         current++;
         return true;

@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lox/Scanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/example/1.lox" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Scanner Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Lox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scanner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/TokenType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Scanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/example/1.lox" beforeDir="false" afterPath="$PROJECT_DIR$/test/example/1.lox" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -51,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "challenge1",
     "jdk.selected.JAVA_MODULE": "corretto-19",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -87,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712262753026</updated>
-      <workItem from="1712262754034" duration="13119000" />
+      <workItem from="1712262754034" duration="13836000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -105,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712270546895</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Scanner Completed">
+      <option name="closed" value="true" />
+      <created>1712289502118</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712289502118</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +119,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="Scanner Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scanner Completed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lox/Scanner.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
