@@ -1,3 +1,5 @@
+package lox;
+
 public enum TokenType {
 
     // Single-character tokens
@@ -15,7 +17,7 @@ public enum TokenType {
 
     // Keywords
     AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,
-    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHiLE,
+    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,
 
     EOF
 
