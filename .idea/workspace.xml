@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="README.md">
-      <change afterPath="$PROJECT_DIR$/src/lox/Expr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tool/GenerateAst.java" afterDir="false" />
+    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Expr representation">
+      <change afterPath="$PROJECT_DIR$/src/lox/AstPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lox/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/Expr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Expr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lox/Lox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Lox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/example/1.lox" beforeDir="false" afterPath="$PROJECT_DIR$/test/example/1.lox" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tool/GenerateAst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tool/GenerateAst.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GenerateAst">
+  <component name="RunManager" selected="Application.AstPrinter">
+    <configuration name="AstPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lox.AstPrinter" />
+      <module name="jlox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GenerateAst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tool.GenerateAst" />
       <module name="jlox" />
@@ -83,13 +96,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.AstPrinter" />
       <item itemvalue="Application.GenerateAst" />
       <item itemvalue="Application.Lox" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GenerateAst" />
+        <item itemvalue="Application.AstPrinter" />
         <item itemvalue="Application.Lox" />
+        <item itemvalue="Application.GenerateAst" />
         <item itemvalue="Application.Lox" />
       </list>
     </recent_temporary>
@@ -104,7 +119,7 @@
       <updated>1712262753026</updated>
       <workItem from="1712262754034" duration="13119000" />
       <workItem from="1712350644190" duration="4916000" />
-      <workItem from="1712431152259" duration="1808000" />
+      <workItem from="1712431152259" duration="8128000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -138,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712350676610</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Expr representation">
+      <option name="closed" value="true" />
+      <created>1712436812073</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712436812073</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +170,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="Expr representation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Expr representation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
