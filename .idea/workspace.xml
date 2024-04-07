@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Expr representation">
-      <change afterPath="$PROJECT_DIR$/src/lox/AstPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lox/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Expr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Expr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Lox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Lox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tool/GenerateAst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tool/GenerateAst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +55,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.AstPrinter">
+  <component name="RunManager" selected="Application.Lox">
     <configuration name="AstPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lox.AstPrinter" />
       <module name="jlox" />
@@ -102,8 +98,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AstPrinter" />
         <item itemvalue="Application.Lox" />
+        <item itemvalue="Application.AstPrinter" />
         <item itemvalue="Application.GenerateAst" />
         <item itemvalue="Application.Lox" />
       </list>
@@ -171,7 +167,8 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="README.md" />
     <MESSAGE value="Expr representation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Expr representation" />
+    <MESSAGE value="Comma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comma" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,17 +3,30 @@ package lox;
 import com.sun.tools.jconsole.JConsoleContext;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.TooManyListenersException;
 
 import static lox.TokenType.*;
 
 public class Parser {
+
+
+    private static class ParseError extends RuntimeException {}
+
     private final List<Token> tokens;
     private int current = 0;
 
     Parser(List<Token> tokens) {
         this.tokens = tokens;
+    }
+
+    Expr parse() {
+        try {
+            return expression();
+        } catch (ParseError error) {
+            return null;
+        }
     }
 
     private Expr expression() {
@@ -51,6 +64,7 @@ public class Parser {
             Expr right = factor();
             expr = new Expr.Binary(expr, operator, right);
         }
+        return expr;
     }
 
     private Expr factor() {
@@ -88,6 +102,8 @@ public class Parser {
             consume(RIGHT_PAREN, "Expect ')' after expression.");
             return new Expr.Grouping(expr);
         }
+
+        throw error(peek(), "Expect expression.");
     }
 
     private Token consume(TokenType type, String message)  {
@@ -97,6 +113,7 @@ public class Parser {
     }
 
     private ParseError error(Token token, String message) {
+
         Lox.error(token, message);
         return new ParseError();
     }
