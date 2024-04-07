@@ -12,7 +12,8 @@ import static lox.TokenType.*;
 public class Parser {
 
 
-    private static class ParseError extends RuntimeException {}
+    private static class ParseError extends RuntimeException {
+    }
 
     private final List<Token> tokens;
     private int current = 0;
@@ -23,10 +24,25 @@ public class Parser {
 
     Expr parse() {
         try {
-            return expression();
+            return ternary();
         } catch (ParseError error) {
             return null;
         }
+    }
+
+    private Expr ternary() {
+        Expr expr = expression();
+        Expr right = null;
+        while (match(QUESTION_MARK)) {
+            Expr left = expression();
+            if(match(COLON)) {
+                right = expression();
+            }else {
+                throw error(advance(), "Expect ':' after '?' in a ternary.");
+            }
+            return new Expr.Ternary(expr, left, right);
+        }
+        return expr;
     }
 
     private Expr expression() {
@@ -36,7 +52,7 @@ public class Parser {
     private Expr equality() {
         Expr expr = comparison();
 
-        while(match(BANG_EQUAL, EQUAL_EQUAL)) {
+        while (match(BANG_EQUAL, EQUAL_EQUAL)) {
             Token operator = previous();
             Expr right = comparison();
             expr = new Expr.Binary(expr, operator, right);
@@ -47,7 +63,7 @@ public class Parser {
     private Expr comparison() {
         Expr expr = term();
 
-        while(match(GREATER, GREATER_EQUAL, LESS, LESS_EQUAL)) {
+        while (match(GREATER, GREATER_EQUAL, LESS, LESS_EQUAL)) {
             Token operator = previous();
             Expr right = term();
             expr = new Expr.Binary(expr, operator, right);
@@ -70,7 +86,7 @@ public class Parser {
     private Expr factor() {
         Expr expr = unary();
 
-        while(match(SLASH, STAR)) {
+        while (match(SLASH, STAR)) {
             Token operator = previous();
             Expr right = unary();
             expr = new Expr.Binary(expr, operator, right);
@@ -79,7 +95,7 @@ public class Parser {
     }
 
     private Expr unary() {
-        if(match(BANG, MINUS)) {
+        if (match(BANG, MINUS)) {
             Token operator = previous();
             Expr right = unary();
             return new Expr.Unary(operator, right);
@@ -89,15 +105,15 @@ public class Parser {
     }
 
     private Expr primary() {
-        if(match(FALSE)) return new Expr.Literal(false);
-        if(match(TRUE)) return new Expr.Literal(true);
-        if(match(NIL)) return new Expr.Literal(null);
+        if (match(FALSE)) return new Expr.Literal(false);
+        if (match(TRUE)) return new Expr.Literal(true);
+        if (match(NIL)) return new Expr.Literal(null);
 
-        if(match(NUMBER, STRING)) {
+        if (match(NUMBER, STRING)) {
             return new Expr.Literal(previous().literal);
         }
 
-        if(match(LEFT_PAREN)) {
+        if (match(LEFT_PAREN)) {
             Expr expr = expression();
             consume(RIGHT_PAREN, "Expect ')' after expression.");
             return new Expr.Grouping(expr);
@@ -106,7 +122,7 @@ public class Parser {
         throw error(peek(), "Expect expression.");
     }
 
-    private Token consume(TokenType type, String message)  {
+    private Token consume(TokenType type, String message) {
         if (check(type)) return advance();
 
         throw error(peek(), message);
@@ -119,8 +135,8 @@ public class Parser {
     }
 
     private boolean match(TokenType... types) {
-        for(TokenType type : types) {
-            if(check(type)) {
+        for (TokenType type : types) {
+            if (check(type)) {
                 advance();
                 return true;
             }
@@ -129,12 +145,12 @@ public class Parser {
     }
 
     private boolean check(TokenType type) {
-        if(isAtEnd()) return false;
+        if (isAtEnd()) return false;
         return peek().type == type;
     }
 
     private Token advance() {
-        if(!isAtEnd()) current++;
+        if (!isAtEnd()) current++;
         return previous();
     }
 
@@ -147,7 +163,7 @@ public class Parser {
     }
 
     private Token previous() {
-        return tokens.get(current-1);
+        return tokens.get(current - 1);
     }
 
 }

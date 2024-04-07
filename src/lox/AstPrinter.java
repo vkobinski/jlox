@@ -1,9 +1,30 @@
 package lox;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class AstPrinter implements Expr.Visitor<String> {
 
     String print(Expr expr) {
         return expr.accept(this);
+    }
+
+    @Override
+    public String visitTernaryExpr(Expr.Ternary expr) {
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("(").append("ternary");
+
+        Expr[] exprs = new Expr[]{expr.expression, expr.ifTrue, expr.ifFalse};
+
+        for (Expr cur: exprs) {
+            builder.append(" ");
+            builder.append(cur.accept(this));
+        }
+        builder.append(")");
+        return builder.toString();
+
     }
 
     @Override
