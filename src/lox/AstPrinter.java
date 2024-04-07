@@ -7,6 +7,21 @@ public class AstPrinter implements Expr.Visitor<String> {
     }
 
     @Override
+    public String visitCommaExpr(Expr.Comma expr) {
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("(").append("comma");
+        for (Expr cur: expr.expressions) {
+            builder.append(" (");
+            builder.append(cur.accept(this));
+            builder.append(")");
+        }
+        builder.append(")");
+        return builder.toString();
+
+    }
+
+    @Override
     public String visitBinaryExpr(Expr.Binary expr) {
         return parenthesize(expr.operator.lexeme, expr.left, expr.right);
     }
