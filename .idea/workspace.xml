@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Added .idea">
-      <change afterPath="$PROJECT_DIR$/src/lox/Interpreter.java" afterDir="false" />
+    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Interpreter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Expr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Expr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tool/GenerateAst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tool/GenerateAst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Interpreter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,8 @@
       <workItem from="1712350644190" duration="4916000" />
       <workItem from="1712431152259" duration="8128000" />
       <workItem from="1712521485654" duration="23000" />
-      <workItem from="1712618445890" duration="3051000" />
+      <workItem from="1712618445890" duration="3294000" />
+      <workItem from="1712707463541" duration="3567000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -180,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712462228195</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Interpreter">
+      <option name="closed" value="true" />
+      <created>1712633502321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712633502321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +198,8 @@
     <MESSAGE value="Expr representation" />
     <MESSAGE value="Comma" />
     <MESSAGE value="Added .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .idea" />
+    <MESSAGE value="Interpreter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interpreter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
