@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Binary Expression Interpreter">
+    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Print and Statements">
+      <change afterPath="$PROJECT_DIR$/src/lox/Environment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/AstPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/AstPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lox/Expr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Expr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lox/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Lox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Lox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lox/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tool/GenerateAst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tool/GenerateAst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/example/1.lox" beforeDir="false" afterPath="$PROJECT_DIR$/test/example/1.lox" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712713962382</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Print and Statements">
+      <option name="closed" value="true" />
+      <created>1712722942739</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712722942739</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +227,8 @@
     <MESSAGE value="Added .idea" />
     <MESSAGE value="Interpreter" />
     <MESSAGE value="Binary Expression Interpreter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Binary Expression Interpreter" />
+    <MESSAGE value="Print and Statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Print and Statements" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
