@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Binary Expression Interpreter">
-      <change afterPath="$PROJECT_DIR$/src/lox/RuntimeError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Lox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Lox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/example/1.lox" beforeDir="false" afterPath="$PROJECT_DIR$/test/example/1.lox" afterDir="false" />
-    </list>
+    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Full Arithmetic Interpreter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +20,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "vkobinski"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6d4a385b-69e2-4d9b-a267-549f44ef1e33" />
+        <option name="url" value="https://github.com/vkobinski/jlox.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -123,7 +131,7 @@
       <workItem from="1712431152259" duration="8128000" />
       <workItem from="1712521485654" duration="23000" />
       <workItem from="1712618445890" duration="3294000" />
-      <workItem from="1712707463541" duration="5620000" />
+      <workItem from="1712707463541" duration="6109000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -197,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712713962382</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Full Arithmetic Interpreter">
+      <option name="closed" value="true" />
+      <created>1712716521900</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712716521900</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +227,8 @@
     <MESSAGE value="Added .idea" />
     <MESSAGE value="Interpreter" />
     <MESSAGE value="Binary Expression Interpreter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Binary Expression Interpreter" />
+    <MESSAGE value="Full Arithmetic Interpreter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Arithmetic Interpreter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
