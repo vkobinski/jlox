@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Assign">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lox/Stmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Stmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tool/GenerateAst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tool/GenerateAst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/example/1.lox" beforeDir="false" afterPath="$PROJECT_DIR$/test/example/1.lox" afterDir="false" />
-    </list>
+    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Blocks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +125,7 @@
       <workItem from="1712618445890" duration="3294000" />
       <workItem from="1712707463541" duration="5620000" />
       <workItem from="1712786883167" duration="2426000" />
-      <workItem from="1712858514750" duration="1658000" />
+      <workItem from="1712858514750" duration="1971000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -247,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712858537298</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Blocks">
+      <option name="closed" value="true" />
+      <created>1712865124051</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712865124051</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +264,8 @@
     <MESSAGE value="Print and Statements" />
     <MESSAGE value="Variables" />
     <MESSAGE value="Assign" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assign" />
+    <MESSAGE value="Blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blocks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

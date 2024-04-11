@@ -2,7 +2,8 @@ var result = 1+1;
 
 {
     var result = 2+2;
-    print result;
+    var resultado;
+    print resultado;
 }
 
 print result;
