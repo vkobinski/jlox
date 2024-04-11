@@ -1,8 +1,9 @@
 var result = 1+1;
 
-{
+if(result == 1) {
     var result = 2+2;
     print result;
-}
+} else {
+    print result;
 
-print result;
+}

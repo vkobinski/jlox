@@ -7,27 +7,30 @@ import java.util.List;
 
 public class GenerateAst {
     public static void main(String[] args) throws IOException {
-       if(args.length != 1)  {
-           System.out.println("Usage: generate_ast <output directory>");
-           System.exit(64);
-       }
-       String outputDir = args[0];
+        if (args.length != 1) {
+            System.out.println("Usage: generate_ast <output directory>");
+            System.exit(64);
+        }
+        String outputDir = args[0];
 
-       defineAst(outputDir, "Expr", Arrays.asList(
-               "Assign   : Token name, Expr value",
-               "Binary   : Expr left, Token operator, Expr right",
-               "Grouping : Expr expression",
-               "Literal  : Object value",
-               "Unary    : Token operator, Expr right",
-               "Variable : Token name"
-       ));
+        defineAst(outputDir, "Expr", Arrays.asList(
+                "Assign   : Token name, Expr value",
+                "Binary   : Expr left, Token operator, Expr right",
+                "Grouping : Expr expression",
+                "Literal  : Object value",
+                "Logical  : Expr left, Token operator, Expr right",
+                "Unary    : Token operator, Expr right",
+                "Variable : Token name"
+        ));
 
-       defineAst(outputDir, "Stmt", Arrays.asList(
-               "Block      : List<Stmt> statements",
-               "Expression : Expr expression",
-               "Print      : Expr expression",
-               "Var        : Token name, Expr initializer"
-       ));
+        defineAst(outputDir, "Stmt", Arrays.asList(
+                "Block      : List<Stmt> statements",
+                "Expression : Expr expression",
+                "If         : Expr condition, Stmt thenBranch," +
+                        " Stmt elseBranch",
+                "Print      : Expr expression",
+                "Var        : Token name, Expr initializer"
+        ));
     }
 
     private static void defineAst(String outputDir, String baseName, List<String> types) throws IOException {
@@ -42,7 +45,7 @@ public class GenerateAst {
 
         defineVisitor(writer, baseName, types);
 
-        for(String type: types) {
+        for (String type : types) {
             String className = type.split(":")[0].trim();
             String fields = type.split(":")[1].trim();
             defineType(writer, baseName, className, fields);
@@ -55,11 +58,11 @@ public class GenerateAst {
         writer.close();
     }
 
-    private static void defineVisitor(PrintWriter writer, String baseName, List<String> types){
+    private static void defineVisitor(PrintWriter writer, String baseName, List<String> types) {
 
         writer.println(" interface Visitor<R> {");
 
-        for(String type: types) {
+        for (String type : types) {
             String typeName = type.split(":")[0].trim();
             writer.println("    R visit" + typeName + baseName + "(" + typeName + " " + baseName.toLowerCase() + ");");
         }
@@ -74,7 +77,7 @@ public class GenerateAst {
         writer.println("    " + className + "(" + fieldList + ") {");
 
         String[] fields = fieldList.split(", ");
-        for(String field: fields) {
+        for (String field : fields) {
             String name = field.split(" ")[1];
             writer.println("    this." + name + " = " + name + ";");
         }
