@@ -1,2 +1,3 @@
 var result = "Ababa";
+result = "informatico";
 print result;
