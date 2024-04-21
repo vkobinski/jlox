@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="While and For loops.">
-      <change afterPath="$PROJECT_DIR$/src/lox/LoxCallable.java" afterDir="false" />
+    <list default="true" id="89cee9ed-c6ea-4cc9-b28b-885a5a78976d" name="Changes" comment="Functions">
+      <change afterPath="$PROJECT_DIR$/src/lox/LoxFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lox/Return.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/AstPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/AstPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/Expr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Expr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lox/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Interpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lox/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lox/Stmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lox/Stmt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tool/GenerateAst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tool/GenerateAst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/example/1.lox" beforeDir="false" afterPath="$PROJECT_DIR$/test/example/1.lox" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +155,9 @@
       <workItem from="1712984151733" duration="2667000" />
       <workItem from="1713019598183" duration="10000" />
       <workItem from="1713569407542" duration="117000" />
-      <workItem from="1713665208479" duration="2902000" />
+      <workItem from="1713665208479" duration="3558000" />
+      <workItem from="1713719010114" duration="598000" />
+      <workItem from="1713733479333" duration="3965000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -287,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712986571797</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Functions">
+      <option name="closed" value="true" />
+      <created>1713670979679</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713670979679</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +323,8 @@
     <MESSAGE value="If statement." />
     <MESSAGE value="If test." />
     <MESSAGE value="While and For loops." />
-    <option name="LAST_COMMIT_MESSAGE" value="While and For loops." />
+    <MESSAGE value="Functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
